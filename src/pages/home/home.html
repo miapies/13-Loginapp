@@ -1,14 +1,22 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Bienvenido!
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <ion-list>
+        <ion-item text-center>
+            <img [src]="user.imagen">
+        </ion-item>
+
+        <ion-item>{{ user.nombre }}</ion-item>
+        <ion-item>{{ user.email }}</ion-item>
+        <ion-item>{{ user.uid }}</ion-item>
+        <ion-item>{{ user.provider }}</ion-item>
+
+        <ion-item><button ion-button block color="danger" (click)="salir()">Salir</button></ion-item>
+    </ion-list>
 </ion-content>
